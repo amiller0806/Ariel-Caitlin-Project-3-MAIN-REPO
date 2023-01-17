@@ -11,15 +11,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/valkim55/project-three.git"
+        "url": "git+https://github.com/amiller0806/Ariel-Caitlin-Project-3-MAIN-REPO"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/valkim55/project-three/issues"
+        "url": "https://github.com/amiller0806/Ariel-Caitlin-Project-3-MAIN-REPO/issues"
     },
-    "homepage": "https://github.com/valkim55/project-three#readme",
+    "homepage": "https://github.com/amiller0806/Ariel-Caitlin-Project-3-MAIN-REPO#readme",
     "dependencies": {
         "axios": "^1.2.2",
         "concurrently": "^7.6.0"
