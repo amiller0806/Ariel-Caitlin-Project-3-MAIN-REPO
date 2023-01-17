@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path")
+const path = require("path");
 
 // import ApolloServer
 const {
@@ -9,7 +9,7 @@ const {
 // import our typeDefs and resolvers
 const {
     typeDefs,
-    resolvers
+    resolvers 
 } = require("./schemas");
 const db = require("./config/connection");
 
