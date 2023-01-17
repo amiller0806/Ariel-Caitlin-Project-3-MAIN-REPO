@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 
 // import ApolloServer
 const {
@@ -59,9 +58,14 @@ app.get("/me/:favoriteProducts", (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+if (process.env.NODE_ENV === 'production') {
+    const path = require('path')
+    // console.log('Production environment')
+    app.use('/static', express.static(path.join(_dirname, '../build/static')))
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, '../build/'))
+    })
+}
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
