@@ -24,6 +24,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     persistedQueries: false,
+    playground: false,
     context: authMiddleware,
 });
 
