@@ -8,7 +8,7 @@ const {
 // import our typeDefs and resolvers
 const {
     typeDefs,
-    resolvers 
+    resolvers
 } = require("./schemas");
 const db = require("./config/connection");
 
