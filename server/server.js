@@ -58,14 +58,23 @@ app.get("/me/:favoriteProducts", (req, res) => {
     });
 });
 
-if (process.env.NODE_ENV === 'production') {
-    const path = require('path')
-    // console.log('Production environment')
-    app.use('/static', express.static(path.join(__dirname, '../client/build/static')))
-    app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '../client/build/'))
-    })
-}
+	if (process.env.NODE_ENV === 'production') {
+	    app.use(express.static(path.join(__dirname, '../client/build')));
+	}
+
+	app.get('/', (req, res) => {
+	    res.sendFile(path.join(__dirname, '../client/'));
+	})
+
+
+// if (process.env.NODE_ENV === 'production') {
+//     const path = require('path')
+//     // console.log('Production environment')
+//     app.use('/static', express.static(path.join(__dirname, '../client/build/static')))
+//     app.get('/', (req, res) => {
+//         res.sendFile(path.join(__dirname, '../client/build/'))
+//     })
+// }
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
